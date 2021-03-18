@@ -17,12 +17,12 @@ const server =
       
       console.log("Queries: " + search_params)
 
-      if (req.method === 'GET' ) {
+      if (req.method === 'GET') {
        
           console.log("Look for query parameter data: " + search_params.get("data"))
 
           // Process the queries here
-          res.statusCode = 200      //code for OK
+          res.statusCode = 200      //code for OK cfb
           res.setHeader('Content-Type', 'text/plain') 
           
         let key=search_params.get("data");
