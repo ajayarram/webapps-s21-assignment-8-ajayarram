@@ -11,9 +11,15 @@ const server =
 
       res.write('<html> <head> <title> Served </title> </head>')
       res.write('<body>')
+      res.write('<table>')
+      res.write('<tr>            <th> <h4>Location Name </h4></th>            <th> <h4>Time Limit(hrs)</h4> </th>                        <th>  <h4>Amount($)</h4></th>        </tr>')
+      res.write('<tr>            <td>Charminar</td>            <td> 7 </td>            <td> 1 </td>        </tr>')
+      res.write('<tr>            <td> Golconda</td>            <td> 5 </td>            <td> 2 </td>        </tr>')
+      res.write('       <tr>            <td> SalarJung Museum</td>            <td> 8 </td>            <td> 5 </td>        </tr>')
+      res.write('        <tr>            <td> Goa</td>            <td> 72 </td>            <td> 300 </td>        </tr>')
+    res.write('</table>')
       res.write('Content \n')
-      res.write('More content \n')
-      res.write('Hello World')    
+      res.write('More content \n') 
       res.end('</body></html>')
       //Close the response
     }                           

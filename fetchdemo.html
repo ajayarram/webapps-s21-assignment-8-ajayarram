@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>
+        Fetch Demo
+    </title>
+</head>
+
+<body>
+    <h1>Ajay kumar Reddy Arram Compute's</h1>
+    <p>Enter a number</p>
+    <input type="number" placeholder="enter a number" id="num1"><br><br><br>
+    <br><br><br>
+    <button onclick="computes()">Compute</button>
+    <div id="temp"></div>
+
+    <script>
+        function computes() {
+            let number1 = document.getElementById("num1").value;
+            fetch(`http://127.0.0.1:3001?data=${number1}`)
+            .then((resp) => { 
+                return resp.text() 
+            } )
+            .then((data) => {
+            document.getElementById("temp").innerHTML = data;
+       });
+
+        }
+    </script>
+</body>
+
+</html>
